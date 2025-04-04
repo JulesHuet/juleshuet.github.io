@@ -7,7 +7,7 @@
     <script src="script/script.js"></script>
     <title>Projet HTML NSI</title>
 </head>
-    <body>
+    <body onload=start()>
     <header>
         <h1>Bonjour <span id="user"></span>!</h1>
     </header>
@@ -22,13 +22,14 @@
     </article>
 
     <main>
-    <section>
+    <section id="AfficherLePrénom">
         <form name="f1" action="">
             <p>Nom: <input id="nom" type="text"></p>
             <p><input type="button" value="Afficher" onclick="affiche()"></p>
         </form>
-        <img src="images/duck.png" alt="">
+        <img src="images/duck.png" alt="" id='quaaaaaack' onmouseover=flower() onmouseleave=removeflower()>
     </section>
+
     <section id="Principale">
         <h2>Pages Externes</h2>
         <a href="autrepage.html">Lien vers une autre page</a>
@@ -36,7 +37,10 @@
         <audio controls src="media/duckquacksfx.mp3"></audio>
         <br><br><br><br>
         <img src="media/duckdance.gif" alt="">
+        
         <h2>Javascript</h2>
+
+        <form action="">
         <select id="choix" name="CouleurDuCanard" onchange="selection()">
             <option value="black">Blanc</option>
             <option value="green">Vert</option>
@@ -46,11 +50,15 @@
             <option value="orange">Orange</option>
             <option value="gold">Jaune</option>
         </select>
+        <input type="button" value="Changer La Couleur Du Canard" onclick=couleurcanardquack()>
+        </form> 
+
+        <img id="quackquack" src="images/canard_white.png" alt="">
         <br>
+
         <h5>:3</h5>
     </section>
-    </main>
-
+    </main>  
     <footer>
         <a href="http://www.cordeliers.fr/"> Cliquez ici pour vous rendre sur le site du lycée</a>
     </footer>
